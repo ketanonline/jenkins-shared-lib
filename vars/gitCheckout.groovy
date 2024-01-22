@@ -11,6 +11,7 @@ def call(body) {
         stages {
             stage('checkout git') {
                 steps {
+                    sh "echo 'checking out"
                     git branch: pipelineParams.branch, credentialsId: 'GitCredentials', url: pipelineParams.scmUrl
                 }
             }
