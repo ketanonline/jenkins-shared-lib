@@ -45,11 +45,5 @@ def call(Map pipelineParams) {
             //     }
             // }
         }
-        post {
-            failure {
-                // mail to: pipelineParams.email, subject: 'Pipeline failed', body: "${env.BUILD_URL}"
-                sh 'echo "pipeline failed"'
-            }
-        }
     }
 }
