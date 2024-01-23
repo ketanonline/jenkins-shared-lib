@@ -7,7 +7,7 @@ def call(Map pipelineParams) {
         stages {
             stage('checkout git') {
                 steps {
-                    sh "echo 'checking out"
+                    sh 'echo "Now checkiing out"'
                     git branch: pipelineParams.branch, credentialsId: 'GitCredentials', url: pipelineParams.scmUrl
                 }
             }
